@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="NDt-0y-Ql6" kind="presentation" id="C3t-hT-Cvo"/>
+                                    <segue destination="NDt-0y-Ql6" kind="presentation" identifier="openSearchSegue" id="C3t-hT-Cvo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,10 +34,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Table View Controller-->
+        <!--Search Table View Controller-->
         <scene sceneID="NJs-mc-fsw">
             <objects>
-                <tableViewController id="Zxj-P0-TWA" sceneMemberID="viewController">
+                <tableViewController id="Zxj-P0-TWA" customClass="SearchTableViewController" customModule="tabletest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cNW-jd-44F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GM2-vg-YYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146.376811594203" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1520" y="228"/>
         </scene>
     </scenes>
 </document>

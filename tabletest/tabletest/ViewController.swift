@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier=="openSearchSegue"){
+            let searchController = (segue.destination as! UINavigationController).topViewController as! SearchTableViewController
+        }
+    }
 }
 
