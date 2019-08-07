@@ -26,17 +26,26 @@ class SearchTableViewController: UITableViewController {
         onElementSelected!(element)
         self.dismiss(animated: true, completion: nil)
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
 
         let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
+        self.title = "Loading..."
         dispatchQueue.async{
             sleep(4)
             let myElements:[String] = ["1","2","3"]
             DispatchQueue.main.async {
+                let ffdfd = self.navigationController;
+                if (ffdfd == nil){
+                    return;
+                }
                self.list.append(contentsOf: myElements)
                 self.tableView.reloadData()
+                self.title! = "ABC"
             }
         }
         
+    }
+    @IBAction func onCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
