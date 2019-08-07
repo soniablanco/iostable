@@ -20,6 +20,11 @@ class SearchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count;
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let element = list[indexPath.row]
+        onElementSelected!(element)
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
 
     }
