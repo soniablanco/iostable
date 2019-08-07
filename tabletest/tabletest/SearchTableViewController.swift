@@ -8,8 +8,10 @@
 
 import UIKit
 class SearchTableViewController: UITableViewController {
+    var onElementSelected:((String) -> ())?
     override func viewWillAppear(_ animated: Bool) {
         let fdfd = 3;
         let ffdf22 = 2
+        self.onElementSelected!("22")
     }
 }

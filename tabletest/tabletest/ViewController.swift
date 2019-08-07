@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier=="openSearchSegue"){
             let searchController = (segue.destination as! UINavigationController).topViewController as! SearchTableViewController
+            searchController.onElementSelected = { text in
+                
+                print("text = \(text)")
+                
+                
+            }
         }
     }
 }
